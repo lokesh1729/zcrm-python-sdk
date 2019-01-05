@@ -77,7 +77,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def create_record(self):
         try:
@@ -111,7 +111,7 @@ class EntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_record(self):
         try:
@@ -150,7 +150,7 @@ class EntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_record(self):
         try:
@@ -170,7 +170,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def convert_record(self, potential_record, assign_to_user):
         try:
@@ -222,7 +222,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def upload_photo(self, file_path):
         try:
@@ -241,7 +241,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def download_photo(self):
         try:
@@ -260,7 +260,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_photo(self):
         try:
@@ -279,7 +279,7 @@ class EntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_zcrmrecord_as_json(self):
         try:
@@ -612,7 +612,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def add_relation(self):
         try:
@@ -635,7 +635,7 @@ class RelatedListAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def remove_relation(self):
         try:
@@ -655,7 +655,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def add_note(self, zcrm_note_ins):
         try:
@@ -682,7 +682,7 @@ class RelatedListAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_note(self, zcrm_note_ins):
         try:
@@ -709,7 +709,7 @@ class RelatedListAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_note(self, zcrm_note_ins):
         try:
@@ -729,7 +729,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_notes(self, sort_by, sort_order, page, per_page):
         try:
@@ -764,7 +764,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_attachments(self, page, per_page):
         try:
@@ -795,7 +795,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_zcrmnote_as_json(self, zcrm_note_ins):
         note_json = dict()
@@ -929,7 +929,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def upload_link_as_attachment(self, link_url):
         try:
@@ -964,7 +964,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def download_attachment(self, attachment_id):
         try:
@@ -983,7 +983,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_attachment(self, attachment_id):
         try:
@@ -1003,7 +1003,7 @@ class RelatedListAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
 
 class MassEntityAPIHandler(APIHandler):
@@ -1057,7 +1057,7 @@ class MassEntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def create_records(self, record_ins_list):
         handler_ins = APIHandler()
@@ -1114,7 +1114,7 @@ class MassEntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def upsert_records(self, record_ins_list):
         try:
@@ -1169,7 +1169,7 @@ class MassEntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_records(self, record_ins_list):
         try:
@@ -1224,7 +1224,7 @@ class MassEntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_mass_records(self, entityid_list, field_api_name, value):
         try:
@@ -1275,7 +1275,7 @@ class MassEntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_records(self, entityid_list):
         try:
@@ -1318,7 +1318,7 @@ class MassEntityAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_deleted_records(self):
         return self.get_deleted_records('all')
@@ -1362,7 +1362,7 @@ class MassEntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def search_records(self, search_word, page, per_page, type):
         try:
@@ -1398,7 +1398,7 @@ class MassEntityAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def set_trash_record_properties(self, trash_record_ins, trash_record_prop):
         try:
@@ -1470,7 +1470,7 @@ class ModuleAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_fields(self):
         try:
@@ -1496,7 +1496,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_layouts(self):
         try:
@@ -1522,7 +1522,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_layout(self, layout_id):
         try:
@@ -1548,7 +1548,7 @@ class ModuleAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_customviews(self):
         try:
@@ -1579,7 +1579,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_customview(self, customview_id):
         try:
@@ -1610,7 +1610,7 @@ class ModuleAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_module_settings(self):
         try:
@@ -1630,7 +1630,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_customview(self, customview_instance):
         try:
@@ -1651,7 +1651,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_relatedlists(self):
         try:
@@ -1684,7 +1684,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_relatedlist(self, relatedlist_id):
         try:
@@ -1714,7 +1714,7 @@ class ModuleAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def construct_json_for_cv_update(self, customview_instance):
         cv_settings = dict()
@@ -2122,7 +2122,7 @@ class MetaDataAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_module(self, module_api_name):
         try:
@@ -2143,7 +2143,7 @@ class MetaDataAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_zcrmmodule(self, module_details):
         try:
@@ -2307,7 +2307,7 @@ class OrganizationAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_roles(self):
         try:
@@ -2332,7 +2332,7 @@ class OrganizationAPIHandler(APIHandler):
             except ImportError:
                 from Utility import CommonUtil
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_role(self, role_id):
         try:
@@ -2358,7 +2358,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_profiles(self):
         try:
@@ -2384,7 +2384,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_profile(self, profile_id):
         try:
@@ -2412,7 +2412,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def create_user(self, user_instance):
         try:
@@ -2437,7 +2437,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def update_user(self, user_instance):
         try:
@@ -2462,7 +2462,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def delete_user(self, user_id):
         try:
@@ -2485,7 +2485,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_user(self, user_id):
         try:
@@ -2511,7 +2511,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def get_all_users(self):
         return self.get_users()
@@ -2569,7 +2569,7 @@ class OrganizationAPIHandler(APIHandler):
             raise ex
         except Exception as ex:
             CommonUtil.raise_exception(handler_ins.request_url_path,
-                                       ex.message, traceback.format_stack())
+                                       str(ex), traceback.format_stack())
 
     def construct_json_from_user_instance(self, user_instance):
         user_info_json = dict()

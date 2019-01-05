@@ -41,7 +41,7 @@ class MyClass(object):
     def test(self):
         resp = ZCRMModule.get_instance('Invoices').get_record(
             440872000000208009)
-        print resp.data.entity_id
+        print(resp.data.entity_id)
         print resp.data.created_by.name
         print resp.data.modified_by.name
         print resp.data.created_time
