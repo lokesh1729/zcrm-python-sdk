@@ -30,6 +30,17 @@ class CommonAPIResponse(object):
         self.set_response_json()
         self.process_response()
 
+    def __str__(self):
+        return "{response_json: %s, response_headers: %s, response: %s,"\
+            "status_code: %s, url: %s, data: %s, status: %s, code: %s,"\
+            "message: %s, details: %s}" % (self.response_json,
+                                           self.response_headers,
+                                           self.response,
+                                           self.status_code,
+                                           self.url, self.data,
+                                           self.status, self.code,
+                                           self.message, self.details)
+
     def set_response_json(self):
         if (self.status_code != APIConstants.RESPONSECODE_NO_CONTENT):
             self.response_json = self.response.json()
