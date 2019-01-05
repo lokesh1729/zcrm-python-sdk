@@ -26,7 +26,6 @@ class ZCRMRestClient(object):
     def get_instance():
         return ZCRMRestClient()
 
-    @staticmethod
     def get_current_user_email_id(self):
         return threading.current_thread().__getattribute__(
             'current_user_email'
