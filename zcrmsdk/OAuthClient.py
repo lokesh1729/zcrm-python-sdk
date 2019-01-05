@@ -315,11 +315,16 @@ class ZohoOAuthClient(object):
         """
         try:
             params = {
-                'code': grant_token,
-                'client_id': ZohoOAuthConstants.CLIENT_ID,
-                'client_secret': ZohoOAuthConstants.CLIENT_SECRET,
-                'redirect_uri': ZohoOAuthConstants.REDIRECT_URL,
-                'grant_type': 'authorization_code'
+                'code':
+                grant_token,
+                'client_id':
+                ZohoOAuth.configProperties[ZohoOAuthConstants.CLIENT_ID],
+                'client_secret':
+                ZohoOAuth.configProperties[ZohoOAuthConstants.CLIENT_SECRET],
+                'redirect_uri':
+                ZohoOAuth.configProperties[ZohoOAuthConstants.REDIRECT_URL],
+                'grant_type':
+                'authorization_code'
             }
             http_connector = ZohoOAuthHTTPConnector.get_instance(
                 ZohoOAuth.get_token_url(),
