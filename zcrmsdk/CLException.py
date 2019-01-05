@@ -56,7 +56,8 @@ class Logger(object):
             from .Utility import ZCRMConfigUtil
         except ImportError:
             from Utility import ZCRMConfigUtil
-        log_path = ZCRMConfigUtil.config_prop_dict['applicationLogFilePath']
+        log_path = ZCRMConfigUtil.config_prop_dict.get(
+            'applicationLogFilePath', "")
 
         if log_path is not None and log_path.strip() != "":
             import os
