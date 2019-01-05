@@ -37,30 +37,23 @@ class ZCRMRestClient(object):
     def initialize(config_dict=None):
         ZCRMConfigUtil.initialize(True, config_dict)
 
-    @staticmethod
     def get_all_modules(self):
         return MetaDataAPIHandler.get_instance().get_all_modules()
 
-    @staticmethod
     def get_module(self, module_api_name):
         return MetaDataAPIHandler.get_instance().get_module(module_api_name)
 
-    @staticmethod
     def get_organization_instance(self):
         return ZCRMOrganization.get_instance()
 
-    @staticmethod
     def get_module_instance(self, module_api_name):
         return ZCRMModule.get_instance(module_api_name)
 
-    @staticmethod
     def get_record_instance(self, module_api_name, entity_id):
         return ZCRMRecord.get_instance(module_api_name, entity_id)
 
-    @staticmethod
     def get_current_user(self):
         return OrganizationAPIHandler.get_instance().get_current_user()
 
-    @staticmethod
     def get_organization_details(self):
         return OrganizationAPIHandler.get_instance().get_organization_details()
