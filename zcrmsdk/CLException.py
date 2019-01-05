@@ -71,7 +71,7 @@ class Logger(object):
         # add the handlers to the logger
         logger.addHandler(console_handler)
 
-        if (exception not None):
+        if not exception:
             message += '; Exception Message::' + exception.__str__()
 
         if (level == logging.ERROR):
