@@ -343,12 +343,12 @@ class ZohoOAuthClient(object):
                 return oAuthTokens.refreshToken, oAuthTokens.userEmail
             else:
                 raise ZohoOAuthException(
-                    "Exception occured while fetching accesstoken from Grant Token;Response is:"
+                    "Exception occured while fetching refresh token from Grant Token; Response is:"
                     + str(responseJSON))
 
         except ZohoOAuthException as ex:
             OAuthLogger.add_log(
-                "Exception occured while generating access token",
+                "Exception occured while generating refresh token",
                 logging.ERROR, ex)
             raise ex
 
