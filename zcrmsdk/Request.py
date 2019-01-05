@@ -43,7 +43,7 @@ class APIRequest(object):
     def authenticate_request(self):
         accessToken = ZCRMConfigUtil.get_instance().get_access_token()
 
-        if (self.request_headers == None):
+        if (self.request_headers is None):
             self.request_headers = {
                 APIConstants.AUTHORIZATION:
                 APIConstants.OAUTH_HEADER_PREFIX + accessToken

@@ -197,7 +197,7 @@ class OAuthLogger(object):
         # add the handlers to the logger
         logger.addHandler(consoleHandler)
 
-        if (exception != None):
+        if (exception is not None):
             message += '; Exception Message::' + exception.__str__()
 
         if (level == logging.ERROR):

@@ -342,7 +342,7 @@ class EntityAPIHandler(APIHandler):
     def get_zcrmprice_detail_as_json(self, priceBookPricingIns):
         priceDetailJSON = dict()
 
-        if priceBookPricingIns.id != None:
+        if priceBookPricingIns.id is not None:
             priceDetailJSON["id"] = priceBookPricingIns.id
         priceDetailJSON["discount"] = priceBookPricingIns.discount
         priceDetailJSON["to_range"] = priceBookPricingIns.to_range
@@ -396,7 +396,7 @@ class EntityAPIHandler(APIHandler):
                 lineItemData["list_price"] = lineItem.list_price
             lineItemData["quantity"] = lineItem.quantity
 
-            if lineItem.discount_percentage == None:
+            if lineItem.discount_percentage is None:
                 lineItemData["Discount"] = lineItem.discount
             else:
                 lineItemData["Discount"] = lineItem.discount_percentage + "%"

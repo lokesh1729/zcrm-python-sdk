@@ -261,14 +261,14 @@ class ZCRMConfigUtil(object):
                 if (key not in config_dict):
                     if (key != APIConstants.CURRENT_USER_EMAIL
                             or ZCRMRestClient.get_instance().
-                            get_current_user_email_id() == None):
+                            get_current_user_email_id() is None):
                         raise ZohoOAuthException(key + ' is mandatory')
                 elif (key in config_dict and
                       (config_dict[key] is None or config_dict[key] == "")):
 
                     if (key != APIConstants.CURRENT_USER_EMAIL
                             or ZCRMRestClient.get_instance().
-                            get_current_user_email_id() == None):
+                            get_current_user_email_id() is None):
                         raise ZohoOAuthException(key + ' value is missing')
             ZCRMConfigUtil.set_config_values(config_dict)
 
@@ -317,7 +317,7 @@ class ZCRMConfigUtil(object):
         userEmail = ZCRMRestClient.get_instance().get_current_user_email_id()
 
         if (userEmail is None and
-            (ZCRMConfigUtil.config_prop_dict['currentUserEmail'] == None or
+            (ZCRMConfigUtil.config_prop_dict['currentUserEmail'] is None or
              ZCRMConfigUtil.config_prop_dict['currentUserEmail'].strip() == '')
             ):
             raise ZCRMException(
