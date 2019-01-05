@@ -197,7 +197,7 @@ class EntityResponse(object):
                                                          DUPLICATE_FIELD]
 
     @staticmethod
-    def get_instance(self, entityResponse):
+    def get_instance(entityResponse):
         return EntityResponse(entityResponse)
 
 

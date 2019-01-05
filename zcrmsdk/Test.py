@@ -25,7 +25,7 @@ class MyThread(threading.Thread):
 
     def run(self):
         self.local.email = self.email
-        print self.local.email
+        print(self.local.email)
 
 
 class MyClass(object):

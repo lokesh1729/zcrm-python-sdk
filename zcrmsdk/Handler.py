@@ -1009,6 +1009,7 @@ class RelatedListAPIHandler(APIHandler):
 class MassEntityAPIHandler(APIHandler):
     def __init__(self, module_instance):
         self.module_instance = module_instance
+        super(MassEntityAPIHandler, self).__init__()
 
     @staticmethod
     def get_instance(module_instance):
@@ -1059,6 +1060,7 @@ class MassEntityAPIHandler(APIHandler):
                                        ex.message, traceback.format_stack())
 
     def create_records(self, record_ins_list):
+        handler_ins = APIHandler()
         try:
             try:
                 from .Utility import CommonUtil
@@ -1070,7 +1072,6 @@ class MassEntityAPIHandler(APIHandler):
                     'Records_Create',
                     "records count must be less than or equals to 100",
                     'MORE RECORDS PROVIDED', "MORE RECORDS")
-            handler_ins = APIHandler()
             handler_ins.request_url_path = self.module_instance.api_name
             handler_ins.request_method = APIConstants.REQUEST_METHOD_POST
             handler_ins.request_api_key = APIConstants.DATA
@@ -1439,6 +1440,7 @@ class MassEntityAPIHandler(APIHandler):
 class ModuleAPIHandler(APIHandler):
     def __init__(self, module_instance):
         self.module_instance = module_instance
+        super(ModuleAPIHandler, self).__init__()
 
     @staticmethod
     def get_instance(module_ins):
