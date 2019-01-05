@@ -207,6 +207,14 @@ class EntityResponse(object):
             self.upsert_duplicate_field = entityResponse[APIConstants.
                                                          DUPLICATE_FIELD]
 
+    def __str__(self):
+        return """{response_json: %s, code: %s, message: %s, status: %s,
+                    details: %s, data: %s, upsert_action: %s,
+                    upsert_duplicate_field: %s}""" % (
+            self.response_json, self.code, self.message, self.status,
+            self.details, self.data, self.upsert_action,
+            self.upsert_duplicate_field)
+
     @staticmethod
     def get_instance(entityResponse):
         return EntityResponse(entityResponse)
