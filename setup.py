@@ -3,10 +3,11 @@ Created on Aug 18, 2017
 
 @author: sumanth-3058
 '''
-from setuptools import setup, find_packages
 # To use a consistent encoding
 from codecs import open
 from os import path
+
+from setuptools import find_packages, setup
 
 here = path.abspath(path.dirname(__file__))
 
@@ -17,17 +18,14 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='zcrmsdk',
     version='1.0.6',
-
     description='Zoho CRM SDK for Python developers',
     long_description=long_description,
 
     # The project's main homepage.
     url='https://github.com/zoho/zcrm-python-sdk',
-
     author='Zoho CRM API Team',
     author_email='support@zohocrm.com',
     scripts=[],
-
     classifiers=[
         'Development Status :: 5 - Production/Stable',
 
